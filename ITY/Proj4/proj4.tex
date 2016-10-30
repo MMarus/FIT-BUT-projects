@@ -1,0 +1,49 @@
+%Projekt č.4 na ITY - Typografie a publikování
+%Autor: Marek Marušic - 1BIT, VUT FIT
+%Datum: 22.4.2014
+%Popis: Bibliografické citace
+
+\documentclass[11pt,a4paper,titlepage]{article}
+
+\usepackage{times}
+\usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+\bibliographystyle{czplain}
+
+\providecommand{\uv}[1]{\quotedblbase #1\textquotedblleft}
+
+\begin{document}
+\begin{titlepage}
+
+\begin{center}
+\Huge\textsc{Vysoké učení technické v~Brně \\
+\huge Fakulta informačních technologií\\}
+
+\vspace{\stretch{0.382}}
+\LARGE Typografie a~publikování \,--\,4.\,projekt \\
+\Huge{Bibliografické citace} \\
+\vspace{\stretch{0.618}}
+\end{center}
+{\Large \today \hfill
+Marek Marušic}
+\end{titlepage}
+
+\section{Typografia}
+Typografia (z~gréckeho \emph{typos} \uv{forma} a~\emph{graphien} \uv{písať }) je umelecko-technický odbor, ktorý sa zaoberá prácou s~písmom a~jeho usporiadaním v~grafických prejavoch.
+Typografia sa zaoberá problematikou grafickej úpravy tlačených dokumentov s~použitím vhodných rezov písma a~usporiadania jednotlivých znakov a~odsekov vo vhodnej, pre čitateľa zrozumiteľnej a~esteticky akceptovateľnej forme. Zaoberá sa tiež dizajnom písma \cite{TYPO:Indicka_pisma}, výberom farebnej schémy dokumentov, ilustrácií, zalamovaním textu do odsekov až po výber papiera pre tlač.
+Jej účelom je, aby bolo možné čítať dokumenty čo najpohodlnejšie a~najprirodzenejšie.
+Dnes typograf na svoju prácu spravidla používa niektorý zo zalamovacích programov ako napr. Adobe InDesign, Adobe PageMaker, QuarkXPress alebo TeX. Na tvorbu písma sa používajú písmové editory ako napr. FontLab \cite{Wiki:Typografia}. Typografia je bližšie rozoberaná v~rôznych časopisoch a~článkoch \cite{TYPO:Pritomna_budoucnost}.
+
+\section{\LaTeX}
+Dnes prakticky neexistuje osobný počítač, na ktorom by nebol k~dispozícií textový editor \cite{Rybicka:Latex_pro_zacatecniky}. \LaTeX je prenositeľný, a~univerzálny programovací jazyk na vysadzovanie textu, ktorý sa dá editovať v~každom textovom editore. Pracovať s~ním, je možné sa naučiť počas niekoľko týždňov s~pomocou web stránok \cite{Martinek:Latex} a~ked už budete mať všetko osvojené môžeťe si prezrieť novinky z~oboru \cite{Tex_conf:Proc}. \LaTeX\ sa obzvlášť hodí pre vedecké a~technické dokumenty. Jeho vynikajúca sadzba matematických vzorcov je legendárna (Latex beginers guide). Ak ste študent alebo vedec je \LaTeX\ najlepšia voľba. Dokonca je vhodný aj pre nevedecké práce, pretože vytvára veľmi kvalitný výstup, je extrémne stabiľný a~spracováva komplexné dokumenty rýchlo bez ohľadnu na ich veľkosť \cite{Kottwitz:LaTeX_beginner's_guide}.
+
+\section{\LaTeX ~ako hobby}
+Ked vás sadzba dokumentov a~typografia začne baviť, môžete sa jej venovať aj vo voľnom čase. Bude to pre vás veľmi výhodné, hlavne pri tvorbe bakalárskej či diplomovej práce. A~nakoniec ak budete až tak zamilovaný do typografie môžte vytvoriť bakalársku prácu na tému z~tohoto oboru. Pre inšpiráciu si môžete prezrieť niektoré staršie práce študentov \cite{Polak:Pismo_pro_3D_zapisovac} \cite{Bednar:Tvorba_pisma_OpenType}. Neskôr sa možete zapojiť do komunity venujúcej sa \LaTeX u napr aj v~ČR či SK \cite{CSTug:web}.
+
+\newpage
+\bibliography{literatura}
+
+
+\end{document}

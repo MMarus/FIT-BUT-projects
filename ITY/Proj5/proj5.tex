@@ -1,0 +1,156 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+\usepackage{graphics}
+\usepackage{picture}
+
+\providecommand{\uv}[1]{\quotedblbase #1\textquotedblleft}
+
+\title[Your Short Title]{Typografia a~\LaTeX}
+\author{Marek Marušic}
+\institute{\textsc{Vysoké učení technické v~Brne \\
+Fakulta Informačných Technologií}}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{Uvod}
+
+\begin{frame}{Čo nás čaká}
+
+\begin{itemize}
+  \item Typografia
+  \item Prečo \LaTeX
+  \item Ukážka
+\end{itemize}
+
+%\vskip 1cm
+
+%\begin{block}{Examples}
+%Some examples of commonly used commands and features are included, to help you get started.
+%\end{block}
+
+\end{frame}
+
+\section{Typografia}
+
+\begin{frame}{Typografia}
+
+\begin{itemize}
+\item Typografia (z~gréckeho \emph{typos} \uv{forma} a~\emph{graphien} \uv{písať })
+\item Umelecko-technický odbor, ktorý sa zaoberá: 
+
+\begin{itemize}
+
+    \item prácou s~písmom a~jeho usporiadaním v~grafických prejavoch
+    \item problematikou grafickej úpravy tlačených dokumentov
+    \item použitím vhodných rezov písma a~usporiadania jednotlivých znakov a~odsekov
+    \item dizajnom písma, výberom farebnej schémy dokumentov, ilustrácií, zalamovaním textu do odsekov až po výber papiera pre tlač.
+\end{itemize}
+  
+\item Účelom je, aby bolo možné čítať dokumenty čo najpohodlnejšie a~najprirodzenejšie
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Typografia pokračovanie}
+
+\begin{itemize}
+\item Dnešný typograf na svoju prácu používa zalamovacie programy
+\begin{itemize}
+\item Adobe InDesign
+\item Adobe PageMaker
+\item QuarkXPress
+\item \TeX
+\end{itemize}
+\item Na tvorbu písma sa používajú písmové editory
+\begin{itemize}
+\item FontLab
+\item FontCreator
+\item FontForge
+\end{itemize}
+
+
+\end{itemize}
+
+\end{frame}
+
+\section{\LaTeX}
+
+\subsection{Prečo \LaTeX}
+
+\begin{frame}{Prečo \LaTeX}
+\begin{itemize}
+\item Najlepšia voľba pre študentov a~vedcov.
+\item Prenositeľný a~univerzálny programovací jazyk na vysadzovanie textu.
+\item Možnosť ho editovať v~každom textovom editore. 
+\item Hodí sa obzvlášť pre vedecké a~technické dokumenty.
+\item Vynikajúca sadzba matematických vzorcov \ref{eq:math}.
+\item Vytvára kvalitný výstup.
+\item Extrémne stabilný.
+\item Spracováva komplexné dokumenty ľahko a~rýchlo bez ohladu na ich veľkosť.
+\end{itemize}
+
+\end{frame}
+
+\subsection{Ukážka}
+
+\begin{frame}{Ukážka čo dokáže \LaTeX}
+\begin{itemize}
+\item Matematické vzorce:
+\begin{align}
+	\int\limits_a^b f(x)\,\mathrm{d}x = -\int_a^b f(x)\,\mathrm{d}x \\
+    \left(\sqrt[5]{x^4}\right)'=\left(x^{\frac{4}{5}}\right)'= \frac{4}{5} x^{-\frac{1}{5}} = \frac{4}{5\sqrt[5]{x}}
+\label{eq:math}
+\end{align}
+
+\item Obrázky:
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.1}
+{\includegraphics{image.eps}}
+\caption{Vektorový obrázok}
+\label{fig:Vect}
+\end{center}
+\end{figure}
+
+\end{itemize}
+
+
+\end{frame}
+
+\section{Použité zdroje}
+\begin{frame}{Použité zdroje}
+\begin{itemize}
+\item J. Rybička: \emph{ \LaTeX\ pro začátečníky}
+\item S.Kottwitz: \emph{\LaTeX\ beginner's guide}
+\item Typografia (umenie). \texttt{http://sk.wikipedia.org/wiki/Typografia(umenie)} %\verb|_|
+\end{itemize}
+\end{frame}
+
+\end{document}
