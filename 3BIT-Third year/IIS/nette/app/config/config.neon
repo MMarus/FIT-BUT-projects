@@ -1,0 +1,62 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+parameters:
+
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+
+
+services:
+	- App\Model\UserManager
+	- App\Forms\SignFormFactory
+	router: App\RouterFactory::createRouter
+
+	acl:
+		class: Nette\Security\Permission
+		setup:
+			- addRole('sestra')
+			- addRole('doktor')
+			- addRole('admin')
+
+			- addResource('Admin')
+			- addResource('Homepage')
+			- addResource('Invoice')
+			- addResource('Patient')
+			- addResource('Plan')
+			- addResource('Sign')
+			- addResource('Tools')
+			- addResource('Visit')
+
+
+			- allow('admin') # allow all
+
+            # SESTRA
+			- allow(null,'Homepage')
+			- allow('sestra','Patient')
+			- allow('sestra','Plan')
+			- allow('sestra','Sign')
+			- allow('sestra','Tools')
+			- allow('sestra','Visit','show')
+			- allow('sestra','Visit','edit')
+			- allow('sestra','Visit','default')
+			# visit nejako obmedzit add drugs, odporucanie  = moze z formov len vykony pridat
+
+
+			# DOKTOR
+			- deny('doktor','Admin')
+			- allow('doktor')
+
+

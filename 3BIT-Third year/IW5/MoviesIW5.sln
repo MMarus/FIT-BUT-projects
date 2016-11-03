@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesIW5", "MoviesIW5\MoviesIW5.csproj", "{9EF908ED-1122-4A42-8E51-B332F9C65D99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesIW5.Model", "MoviesIW5.Model\MoviesIW5.Model.csproj", "{E0C6546B-EBA7-4B03-ADBB-DFB870B14E56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesIW5.ViewModel", "MoviesIW5.ViewModel\MoviesIW5.ViewModel.csproj", "{1B36B907-5DCB-4939-A20C-D95EAFC779F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesIW5.View", "MoviesIW5.View\MoviesIW5.View.csproj", "{4ED31205-BFE7-461B-90C3-A34BB7C100D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EF908ED-1122-4A42-8E51-B332F9C65D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF908ED-1122-4A42-8E51-B332F9C65D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF908ED-1122-4A42-8E51-B332F9C65D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF908ED-1122-4A42-8E51-B332F9C65D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C6546B-EBA7-4B03-ADBB-DFB870B14E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C6546B-EBA7-4B03-ADBB-DFB870B14E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C6546B-EBA7-4B03-ADBB-DFB870B14E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C6546B-EBA7-4B03-ADBB-DFB870B14E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B36B907-5DCB-4939-A20C-D95EAFC779F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B36B907-5DCB-4939-A20C-D95EAFC779F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B36B907-5DCB-4939-A20C-D95EAFC779F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B36B907-5DCB-4939-A20C-D95EAFC779F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ED31205-BFE7-461B-90C3-A34BB7C100D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ED31205-BFE7-461B-90C3-A34BB7C100D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ED31205-BFE7-461B-90C3-A34BB7C100D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ED31205-BFE7-461B-90C3-A34BB7C100D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://xgulan00.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MoviesIW5\\MoviesIW5.csproj
+		SccProjectName1 = MoviesIW5
+		SccLocalPath1 = MoviesIW5
+		SccProjectUniqueName2 = MoviesIW5.Model\\MoviesIW5.Model.csproj
+		SccProjectName2 = MoviesIW5.Model
+		SccLocalPath2 = MoviesIW5.Model
+		SccProjectUniqueName3 = MoviesIW5.ViewModel\\MoviesIW5.ViewModel.csproj
+		SccProjectName3 = MoviesIW5.ViewModel
+		SccLocalPath3 = MoviesIW5.ViewModel
+		SccProjectUniqueName4 = MoviesIW5.View\\MoviesIW5.View.csproj
+		SccProjectName4 = MoviesIW5.View
+		SccLocalPath4 = MoviesIW5.View
+	EndGlobalSection
+EndGlobal

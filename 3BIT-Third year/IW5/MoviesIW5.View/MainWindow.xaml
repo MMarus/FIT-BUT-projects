@@ -1,0 +1,68 @@
+﻿<Window x:Class="MoviesIW5.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:controls="clr-namespace:MoviesIW5.View.UserControls"
+        Title="MainWindow" Height="600" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:viewModels="clr-namespace:MoviesIW5.ViewModel.ViewModels;assembly=MoviesIW5.ViewModel"
+        DataContext="{StaticResource MainViewModel}"
+       >
+    <materialDesign:DialogHost>
+        <materialDesign:DialogHost.DialogContent>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel HorizontalAlignment="Right" Grid.Row="0" Orientation="Horizontal" Margin="8">
+                    <Button Width="30" Padding="2 0 2 0" HorizontalAlignment="Right"
+                            materialDesign:RippleAssist.IsCentered="True" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        <materialDesign:PackIcon Kind="CloseCircle" />
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="50 10 50 10" >
+                    <controls:AddMovieView DataContext="{Binding MoviesViewModel}" />
+                </StackPanel>
+                
+            </Grid>
+        </materialDesign:DialogHost.DialogContent>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        
+        <DockPanel>
+            <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                          Mode="PrimaryMid" DockPanel.Dock="Top">
+                <DockPanel>
+                    <!--<ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
+                                      x:Name="MenuToggleButton"/>-->
+                    <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="True">
+                        <StackPanel>
+                                <Button Content="Add Movie" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" />
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">IW5 Movies Project</TextBlock>
+                </DockPanel>
+            </materialDesign:ColorZone>
+            <ContentControl Margin="16" Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
+        </DockPanel>
+        
+        
+        <StackPanel x:Name="MoviesPanel" Grid.Row="1" Grid.Column="0" ZIndex="1" Visibility="Visible">
+            <controls:MoviesView DataContext="{Binding MoviesViewModel}"/>
+        </StackPanel>
+        <StackPanel x:Name="ActorPanel" Grid.Row="1" Grid.Column="0" ZIndex="0" Visibility="Collapsed">
+            <controls:ActorView />
+        </StackPanel>
+    </Grid>
+        </materialDesign:DialogHost>
+</Window>

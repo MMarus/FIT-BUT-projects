@@ -1,0 +1,213 @@
+{block customStyles}
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="{$basePath}/css/bootstrap-datetimepicker.css" rel="stylesheet">
+{/block}
+{block content}
+    <div class="container-fluid">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h2><strong>Pacient</strong></h2>
+                    </div>
+                    <div class="col-md-9">
+                        <a n:href="Patient:show $patient->ID" class="btn btn-trans-default">
+                            <div>
+                                <strong>Meno: </strong> {$patient->Meno} {$patient->Priezvisko}
+                            </div>
+                            <div>
+                                <strong>Rodné číslo: </strong> {$patient->Rodne_cislo}
+                            </div>
+                            <div>
+                                <strong>Adresa: </strong> {$patient->Adresa |truncate:40}
+                            </div>
+                            <div>
+                                <strong>Poznamky: </strong> {$patient->Poznamky |truncate:40}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h4>Plany</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-trans-default pull-right"
+                                                aria-label="Left Align" data-toggle="modal" data-target="#PlanModal">
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Table with plans -->
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Čas</th>
+                                    <th>Výkon</th>
+
+                                  </tr>
+
+                                  {foreach $plans as $plan}
+                                    <tr name="oneplan" class="{if $plan[0]->datum < $date}dateWarn{/if} {if $plan[0]->done }dateDone{/if}" {if $plan[0]->done }state="done"{/if} hide="0" >
+
+
+                                      <td name="date" value="{$plan[0]->datum}">{$plan[0]->datum}</td>
+
+                                      <td>
+                                        <ul>
+                                          {foreach $plan as $pp}
+
+                                            {ifset $pp->idp}
+                                            {else }
+
+                                                <li>
+                                                    {$pp[1]}
+                                                </li>
+
+                                            {/ifset}
+                                          {/foreach}
+                                        </ul>
+                                      </td>
+
+
+
+                                      <td>
+                                      {if $plan[0]->done }
+                                        <a n:href="Visit:show $plan[0]->done" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-eye-open pull-right" aria-hidden="true"></span>
+                                        </a>
+                                      {else}
+                                        <a n:href="Plan:goplan $plan[0]->idp" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-play pull-right" aria-hidden="true"></span>
+                                        </a>
+                                      {/if}
+                                          <a n:href="Plan:edit $plan[0]->idp" class="btn btn-default">
+                                              <span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span>
+                                          </a>
+                                        </td>
+                                    </tr>
+                                  {/foreach}
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h4>Navstevy</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a n:href="Visit:edit" class="btn btn-trans-default pull-right"
+                                           aria-label="Left Align">
+                                                <span class="glyphicon glyphicon glyphicon-plus"
+                                                      aria-hidden="true"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Table with plans -->
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Datum</th>
+                                    <th>Poznamky</th>
+                                </tr>
+                                {foreach $visits as $visit}
+                                    <tr {if $visit->deleted == 1}class="red"{/if}>
+                                        <td>{$visit->niceDate}</td>
+                                        <td>{$visit->Poznamky}</td>
+                                        <td>
+                                            <a n:href="Visit:show $visit->ID" class="btn btn-default"
+                                               aria-label="Left Align">
+                                                <span class="glyphicon glyphicon glyphicon-list-alt"
+                                                      aria-hidden="true"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {/foreach}
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h4>Uzivane lieky</h4>
+                                    </div>
+                                    {*<div class="col-md-3">
+                                        <button type="button" class="btn btn-trans-default pull-right"
+                                                aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                        </button>
+                                    </div>*}
+                                </div>
+                            </div>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Názov</th>
+                                    <th>Dávkovanie</th>
+                                    <th>ks</th>
+                                </tr>
+                                {foreach $drugs as $drug}
+                                    <tr>
+                                        <td>{$drug->Nazov}</td>
+                                        <td>{$drug->Davkovanie}</td>
+                                        <td>{$drug->PocetBaleni}</td>
+                                    </tr>
+                                {/foreach}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Modal basic -->
+    <div class="modal fade" id="PlanModal" tabindex="-1" role="dialog" aria-labelledby="PlanModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    {control addPlan}
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}
+
+{block customScripts}
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="{$basePath}/js/moment-with-locales.js"></script>
+    <script src="{$basePath}/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#frm-addPlan-Datum').datetimepicker(
+                    {
+                        defaultDate: moment().format(),
+                        locale: 'cs',  // en
+                        format: 'DD.MM.YYYY H:mm'  // MM/DD/YYYY H:mm
+                    });
+        });
+
+    </script>
+{/block}

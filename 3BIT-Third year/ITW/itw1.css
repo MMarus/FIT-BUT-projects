@@ -1,0 +1,321 @@
+/*  Author: Marek Marusic
+ *  Email: xmarus05@stud.fit.vutbr.cz
+ *  Date: 2.1.2016
+ *  File: itw1.css
+ *  Description: CSS file for first project from ITW
+ * */
+body {
+    width: 100%;
+    margin: 0;
+    z-index: -1;
+    line-height: 1.2;
+    font-family: "Arial", sans-serif;
+    font-size: 12pt;
+}
+
+h1 span, hr, .hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.inner {
+    margin: auto;
+    max-width: 1220px;
+    padding: 0 20px;
+}
+
+#social, #footer {
+    width: 100%;
+    left: 0;
+    background: rgb(102, 102, 102);
+    color: white;
+}
+
+/*First row*/
+
+#topmenu, #social{
+    position: fixed;
+    top: 0;
+    padding: .3% .3% 0 .3%;
+}
+
+#topmenu{
+    right: 0;
+}
+
+.login:after {
+    content: url('images/loginlink.png');
+    margin-left: 5px;
+}
+
+.login{
+    text-transform: lowercase;
+    color: white;
+    z-index:1;
+    position:relative;
+    margin-right: 10px;
+}
+
+.icons span{
+    display: none;
+}
+
+.twitter:after{
+    content: url('images/i_twitter.png');
+}
+
+.linkedin:after{
+    content: url('images/i_linkedin.png');
+}
+
+.fb:after{
+    content: url('images/i_fb.png');
+}
+
+#header{
+    background: rgb(204, 255, 255); 
+    border-bottom: 1px solid #F2EAEA;
+}
+#header .inner{
+    margin-top: 31px;
+    min-height: 120px;
+}
+/*First row end*/
+
+/*Second row*/
+h1 {
+    display: inline-block;    
+    margin-left: 40px;
+    width: 31%;
+    float: left;
+}
+h1 a:after {
+    content: url('images/logo.png');    
+}
+
+#menubar {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+#menu{
+    margin: 0;
+}
+
+#menu li{
+    display: inline-block;
+    padding: 16px 0px;  
+    
+}
+
+#menu li a {
+    border: 1px solid white;
+    padding: 16px 16px;  
+    font-size: 16px;
+    color: black;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+#menu li a:hover{
+    background: white;
+}
+
+.dropdown a:after{
+    margin-left: 5px;
+    content: url('images/caretb.png');
+}
+
+.selected a{
+    background: #42B3E5;
+    color: white !important;
+}
+.selected a:after{
+    content: url('images/caretw.png');
+}
+/*Second row end*/
+
+/*Third row*/
+#main header{
+    border-bottom: 1px solid #F2EAEA;
+}
+h2 {
+    font-size: 30pt;
+    color: #475672;
+}
+
+.btn { 
+    margin: 0;
+    float: right;
+    display: inline-block;
+}
+
+.btn.demo a{
+    background: #FAA732;
+    margin-right: 30px; 
+}
+
+.btn a{
+    background: #42B3E5;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 16px 16px;  
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+#main header p:last-child{
+    width: 50%;
+    font-style: italic;
+    display: inline-block;
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+
+/*Third row*/
+
+/*4th row*/
+section img{
+    float: right;
+    margin: 0 0 20px 10px;
+}
+
+h3 {
+    font-size: 25pt;
+    color: #475672;
+    margin: 33px 0 0 0;
+}
+
+section > p > a {
+    text-decoration: underline;
+}
+
+/*4th row*/
+
+/*5th row*/
+#related {
+    margin:0;
+    font-size: 11pt;
+    padding-bottom: 40px;
+}
+
+#related h3{
+    vertical-align: top;
+    margin: 10px 0 0 0;
+}
+
+#news h3 a {
+    color: white;
+    font-size: 15pt;
+    vertical-align: top;
+}
+
+#news h4 {
+    margin: 10px 0 0 0;
+}
+
+#news p {
+    margin: 0;
+    overflow: hidden;
+    font-size: 11pt;
+    height: 74px;
+}
+
+#news strong{
+    color: #42B3E5;
+    font-size: 10pt;    
+    padding-left: 10px;
+}
+
+#news strong:after {
+    content: "...see more...";
+    float: right;
+    font-size: 10pt;    
+    color: #42B3E5;
+}
+.col {
+    width: 32%;
+    display: inline-block;
+}
+
+aside {
+    width: 64%;
+    display: inline-block;
+    vertical-align:top;
+}
+.abox {  
+    width: 49%;
+    display: inline-block;
+    vertical-align:top;
+}
+
+.abox h3{
+    color: white;
+    font-size: 15pt;
+    vertical-align: top;
+    height: 40px;  
+}
+.abox a{
+    text-decoration: none;
+    color: white;
+}
+.abox a span{
+    color: #42B3E5;
+    font-size: 10pt;
+    display: block;
+    margin: 10px;
+    text-align: left;
+}
+
+/*5th row*/
+/*6th row*/
+
+test{
+    
+}
+#footer{
+    font-size: 10pt;
+    margin: 0;
+}
+
+#footer .inner{
+    max-width: none;
+}
+
+.menu{
+    margin: 10px 10px 0 0;
+    float: right;
+}
+.menu li{
+    display: inline-block;    
+}
+.menu li a{
+    color: white;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+.copy{
+    padding: 10px 0;
+}
+
+/*6th row end*/
+
+
+
+
+
+#main {
+    background-color: white;
+}
+
+#related{
+    background-color: #3F5673;
+    color: white;
+}

@@ -1,0 +1,130 @@
+
+
+{block content}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="invoice-title">
+                    <h2>{$title}</h2><h3 class="pull-right">Návšteva č.{$invoice->id_Navsteva}</h3>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <address>
+                            <strong>Adresa:</strong><br>
+                            {$pacient->Meno} {$pacient->Priezvisko}<br>
+                            {$pacient->Adresa |truncate:40}
+                        </address>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <address>
+                            <strong>Fakturacna Adresa:</strong><br>
+                            {$pacient->Meno} {$pacient->Priezvisko}<br>
+                            {$pacient->Adresa |truncate:40}
+                        </address>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <address>
+                            <strong>Platobna metoda:</strong><br>
+                            Hotovosť<br>
+                        </address>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <address>
+                            <strong>Datum vystavenia:</strong><br>
+                            {$invoice->Datum_vystavenia |date:'%d.%m.%Y'}<br>
+                            <strong>Datum splatnosti:</strong><br>
+                            {$invoice->Splatnost |date:'%d.%m.%Y'}<br>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Prehlad Navstevy</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <td><strong>Výkon</strong></td>
+                                    <td class="text-center"><strong>Cena/ks</strong></td>
+                                    <td class="text-center"><strong>Počet kusov</strong></td>
+                                    <td class="text-right"><strong>Spolu</strong></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                {foreach $services as $row}
+                                    <tr>
+                                        <td>{$row->Nazov}</td>
+                                        <td class="text-center">{$row->CenaVykon}&euro;</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-right">{$row->CenaVykon}&euro;</td>
+                                    </tr>
+                                {/foreach}
+                                </tbody>
+
+
+
+                                <thead>
+                                <tr>
+                                    <td><strong>Liek</strong></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-right"></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                {foreach $drugs as $row}
+                                    <tr>
+                                        <td>{$row->Nazov}</td>
+                                        <td class="text-center">{$row->CenaLiek}&euro;</td>
+                                        <td class="text-center">{$row->PocetBaleni}</td>
+                                        <td class="text-right">{$row->CenaLiek*$row->PocetBaleni}&euro;</td>
+                                    </tr>
+                                {/foreach}
+                                </tbody>
+
+                                <thead>
+                                <tr>
+                                    <td><strong>Odporučenie</strong></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-right"></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                {foreach $exts as $row}
+                                    <tr>
+                                        <td>{$row->Nazov}</td>
+                                        <td class="text-center">{$row->CenaExt}&euro;</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-right">{$row->CenaExt}&euro;</td>
+                                    </tr>
+                                {/foreach}
+                                <tr>
+                                    <td class="no-line"></td>
+                                    <td class="no-line"></td>
+                                    <td class="no-line text-center"><strong>Spolu všetko</strong></td>
+                                    <td class="no-line text-right">{$invoice->Suma}&euro;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{/block}

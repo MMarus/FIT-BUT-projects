@@ -1,0 +1,65 @@
+SIP klient
+
+MENO
+      sipklient - Klient pre pripojenie na server a posielanie sprav protokolu SIP 2.0.
+      Klien pocuva na porte 5060.
+
+SPUSTENIE
+      ./sipklient -p options.txt [-m messages.txt]
+
+POPIS
+      sipklient je klient protokolu SIP 2.0 napisany v jazyku C++. Dokaze sa pripojit k serveru
+      podla RFC3261 a autentizovat sa pomocou mechanismu MD5 digest. Klient prijma spravy a
+      odosiela spravy ostatnym klientom podla RFC3428.
+
+PARAMETRE
+      -h, --help
+            Vypis napovedu.
+
+      -p options.txt
+            Specifikuje meno suboru, v ktorom sa nachadzaju udaje potrebne na pripojenie
+            k SIP serveru.
+
+      -m messages.txt
+            Specifikuje meno suboru, v ktorom sa nachadzaju udaje potrebne pre odoslanie sprav.
+            Subor musi mat nasledujuci format:
+            meno@server:port TELO SPRAVY.
+
+KOMPILACIA
+      make
+            prelozi program
+            
+      make clean
+            odstrani prelozeny program
+
+SUBORY
+      Makefile         
+            subor pre preklad
+
+      manual.pdf       
+            dokumentacia
+
+      README           
+            tento soubor
+
+      src/main.cpp     
+            hlavny zdrojovy kod projektu
+
+      src/main.h       
+            hlavickovy subor k main.cpp - definuje vsetky pouzite struktury
+
+      src/sip.cpp      
+            praca so SIP protokolom
+
+      src/sip.h        
+            hlavickovy subor k sip.cpp
+
+      src/fileio.cpp   
+            praca so subormi
+
+      src/fileio.h     
+            hlavickovy subor k fileio.cpp
+
+AUTHOR
+      Marek Marusic, xmarus05@stud.fit.vutbr.cz
+      Datum: 15.11.2015

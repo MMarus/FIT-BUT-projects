@@ -1,0 +1,28 @@
+﻿<Application x:Class="MoviesIW5.View.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MoviesIW5.View"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:viewModels="clr-namespace:MoviesIW5.ViewModel.ViewModels;assembly=MoviesIW5.ViewModel"
+             xmlns:movies="clr-namespace:MoviesIW5.Model.Movies;assembly=MoviesIW5.Model"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <viewModels:MoviesViewModel x:Key="MoviesViewModel" />
+            <viewModels:ActorsViewModel x:Key="ActorsViewModel" />
+            <viewModels:MainViewModel x:Key="MainViewModel" />
+            <movies:MovieModel x:Key="MovieModel"/>
+            
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="MoviesIW5.View.UserControls.AddMovieView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MoviesIW5.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            Background="{DynamicResource MaterialDesignPaper}"
+            FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+             xmlns:viewModels="clr-namespace:MoviesIW5.ViewModel.ViewModels;assembly=MoviesIW5.ViewModel"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:controls="clr-namespace:MoviesIW5.View.UserControls"
+             d:DataContext="{Binding}">
+
+    <StackPanel>
+        <TextBlock FontSize="24px" Margin="0px 0px 0px 50px" HorizontalAlignment="Center">Add new Movie</TextBlock>
+        <TextBlock>Name</TextBlock>
+        <TextBox Text="{Binding NewItem.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150" />
+        <TextBlock>Czech Name</TextBlock>
+        <TextBox Text="{Binding NewItem.NameCzech, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150" />
+        <TextBlock>Lenght</TextBlock>
+        <TextBox Text="{Binding NewItem.Length, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150" />
+        <TextBlock>Description</TextBlock>
+        <TextBox Text="{Binding NewItem.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150" TextWrapping="Wrap" AcceptsReturn="True" />
+        <Button Command="{Binding SaveNewItem}" >
+            <materialDesign:PackIcon Kind="PlusCircle" />
+        </Button>
+    </StackPanel>
+</UserControl>

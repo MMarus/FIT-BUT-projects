@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="MoviesIW5.View.UserControls.MovieDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MoviesIW5.View.UserControls"
+             mc:Ignorable="d" 
+             DataContext="{Binding}"
+             d:DataContext="{StaticResource MovieModel}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate x:Key="DataTemplate">
+            
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Image x:Name="MovieDetailImage" Width="Auto" Height="Auto" Source="/Assets/Images/starwars.jpg"></Image>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <TextBox x:Name="Namea" Text="{Binding Path=Name}"/>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <TextBlock x:Name="MovieNames">
+                                <TextBlock.Inlines>
+                                    <Run Text="{Binding Country}"></Run>
+                                    <Run Text=" | "></Run>
+                                    <Run Text="{Binding NameOriginal}"></Run>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBlock>
+                            <TextBlock.Inlines>
+                                <Run Text="RATING"></Run>
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBlock>
+                        <TextBlock.Inlines>
+                            <Run Text="{Binding Length}"></Run>
+                            <Run Text="m | "></Run>
+                            <!--Genres-->
+                            <!--Date released-->
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+    <!--
+    <TextBox x:Name="Name" Text="{Binding Path=NameOriginal}"/>
+    <TextBox x:Name="Length" Text="{Binding Path=Length}"/>
+    -->
+</UserControl>

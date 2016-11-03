@@ -1,0 +1,188 @@
+{block content}
+    <div class="container-fluid">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h2><strong>Navsteva</strong></h2>
+                            {$nasteva->Datum |date:'%d.%m.%Y %H:%M'}
+                        </div>
+
+
+                        <div class="col-md-8">
+                            <a n:href="Patient:show $patient->ID" class="btn btn-trans-default">
+                                <div>
+                                    <strong>Meno: </strong> {$patient->Meno} {$patient->Priezvisko}
+                                </div>
+                                <div>
+                                    <strong>Rodné číslo: </strong> {$patient->Rodne_cislo}
+                                </div>
+                                <div>
+                                    <strong>Adresa: </strong> {$patient->Adresa |truncate:40}
+                                </div>
+                                <div>
+                                    <strong>Poznamky: </strong> {$patient->Poznamky |truncate:40}
+                                </div>
+                            </a>
+                        </div>
+
+                        {if $role == true}
+                        <div class="col-md-2">
+                            {if $nasteva->deleted == 1}
+                            <a n:href="Visit:undelete $nasteva->ID" class="btn btn-default">
+                                <span class="glyphicon glyphicon-wrench pull-right" aria-hidden="true"></span>
+                            </a>
+                            {else}
+                            <a n:href="Visit:delete $nasteva->ID" class="btn btn-default">
+                                <span class="glyphicon glyphicon-trash pull-right" aria-hidden="true"></span>
+                            </a>
+                            {/if}
+                        </div>
+                        {/if}
+
+                        <div class="col-md-2">
+                            <row>
+                                Suma: {$suma} &euro;
+                            </row>
+                            {if $fakturovane != 1}
+                                <row>
+                                    {form fakturacia}
+                                        <input type="hidden" n:name=poistovna value={$patient->id_Poistovna}>
+                                        <input n:name=fakturovat class="btn btn-trans-default">
+                                    {/form}
+                                </row>
+                            {else}
+                                <row>
+                                    <a n:href="Invoice:show $faktura" class="btn btn-trans-default">
+                                        <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                                    </a>
+                                </row>
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <!-- VYKONY -->
+
+                {if $fakturovane != 1 && ! $sestraa}
+                <div class="col-md-4">
+                    {include '../components/formAddDropdown.latte',
+                    MenoPanelu => 'Vykon',
+                    UpravovanaTabulka => $form1,
+                    theads => $theads1,
+                    rows => $services,
+                    }
+                </div>
+
+                <!-- Ext Pracovisko -->
+                <div class="col-md-4">
+                    {include '../components/formAddDropdown.latte',
+                    MenoPanelu => 'Ext. Pracovisko',
+                    UpravovanaTabulka => $formExt,
+                    theads => $theadsExt,
+                    rows => $ext,
+                    }
+                </div>
+
+                <!--Predpisany liek -->
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <h4>Lieky{*$MenoPanelu*}</h4>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-">
+                                    <button type="button" class="btn btn-trans-default"
+                                            aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </button>
+                                    <label for="submitRemove{$UpravovanaTabulka}" class="btn btn-trans-default" aria-label="Left Align">
+                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table id="{$UpravovanaTabulka}All" class="table table-striped">
+                            <tr>
+                                <td><input id="{$UpravovanaTabulka}" class="toggle-button" type="checkbox"></td>
+                                {foreach $theads as $key => $thead}
+                                    <th>{$thead}</th>
+                                {/foreach}
+                            </tr>
+                            {form removeRow-$UpravovanaTabulka}
+                            {foreach $rows as $row}
+                                <tr>
+                                    <td><input type="checkbox" name="{$UpravovanaTabulka}Sel[]" value={$row->IDcko}>
+                                    </td>
+                                    {foreach $theads as $key => $thead}
+                                        <td>{$row->$key}</td>
+                                    {/foreach}
+                                </tr>
+                            {/foreach}
+                                <input type="submit" id="submitRemove{$UpravovanaTabulka}" class="hidden"/>
+                            {/form}
+                        </table>
+
+                        </div>
+                        <!-- Modal lieky -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                    aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Pridat liek</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        {control addDrugs}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {else}
+                <div class="col-md-4">
+                    {include '../components/columWithData.latte',
+                    MenoPanelu => 'Vykon',
+                    UpravovanaTabulka => $form1,
+                    theads => $theads1,
+                    rows => $services,
+                    }
+                </div>
+                <div class="col-md-4">
+                    {include '../components/columWithData.latte',
+                    MenoPanelu => 'Ext. Pracovisko',
+                    UpravovanaTabulka => $formExt,
+                    theads => $theadsExt,
+                    rows => $ext,
+                    }
+                </div>
+                <div class="col-md-4">
+                    {include '../components/columWithData.latte',
+                    MenoPanelu => "Liek",
+                    UpravovanaTabulka => $UpravovanaTabulka,
+                    theads => $theads,
+                    rows => $rows,
+                    }
+                </div>
+                {/if}
+            </div>
+{/block}
+
+
+
+{*
+<button n:name=send$UpravovanaTabulka type="submit" class="btn btn-trans-default"
+                                            aria-label="Left Align">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </button>
+<label for="submitRemove{$UpravovanaTabulka}" class="btn btn-trans-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                </label>
+
+*}

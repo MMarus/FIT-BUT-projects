@@ -1,0 +1,151 @@
+{**
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{ifset title}{include title|striptags} | {/ifset} {$username} | Ambulance</title>
+
+	{*<link rel="stylesheet" href="{$basePath}/css/style.css">*}
+        <link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+
+	<!-- Custom CSS -->
+    <link href="{$basePath}/css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="{$basePath}/css/bootstrap-btn-transparent.css">
+    <link href="{$basePath}/css/data.css" rel="stylesheet">
+
+    <!-- styles from latte files -->
+    {ifset customStyles}
+        {include customStyles}
+    {/ifset}
+	
+	{block head}{/block}
+</head>
+
+<body>
+	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+	{include content}
+
+	{block meny}
+	<a href="#menu-toggle" id="menu-toggle" type="button"  class="btn btn-default btn-lg sett">
+  		<span class="glyphicon glyphicon-cog sidebar"  aria-hidden="true"></span>
+  	</a>
+  	<div id="wrapper" class="{$menu_wrapper}">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a n:href="Homepage:default">Domov</a>
+                    </li>
+                    <li>
+                        <a n:href="Visit:">Návštevy</a>
+                    </li>
+                    <li>
+                        <a n:href="Patient:">Pacienti</a>
+                    </li>
+                    <li>
+                        <a n:href="Plan:">Plány</a>
+                    </li>
+                    <li>
+                        <a n:href="Invoice:">Faktúry</a>
+                    </li>
+                    {if $ADMIN}
+                        <li>
+                            <a n:href="Admin:">Administrácia</a>
+                        </li>
+                    {/if}
+
+                    <li>
+                        <a href="#" aria-label="Left Align" data-toggle="modal" data-target="#about">O systéme</a>
+                    </li>
+                </ul>
+
+                <span class="menuuname">
+
+                    {$username}</br>
+                    {$userinfo->role}</br></br>
+                    <a class="btn btn-default"  href="{$basePath}/sign/out">Odhlásiť</a>
+
+
+               </span>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+        </div>
+
+        <!-- /#wrapper -->
+
+	{/block}
+
+	{block modal}
+	<div class="modal fade bs-example-modal-sm" id="about" tabindex="-1" role="dialog" aria-labelledby="about">
+            <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><strong>Online Ambulancia</strong></h4>
+                        </div>
+                        <div class="modal-body">
+                            <strong>Online ambulancia je webová aplikácia Informačného systému pre lekára.</strong></br>
+                            Vznikla vrámci projektu k predmetu IIS na VUT FIT, Brno.</br></br>
+
+                            Autori: Marek Maršic (xmarus02), Filip Ježovica (xjezov01)</br></br></br></br>
+
+
+
+
+                            <p class="text-center">05.12.2015</p >
+
+                        </div>
+
+                    </div>
+
+            </div>
+        </div>
+	{/block}
+
+
+
+
+	{block scripts}
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//nette.github.io/resources/js/netteForms.min.js"></script>
+	<script src="{$basePath}/js/main.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{$basePath}/js/bootstrap.js"></script>
+    <script src="{$basePath}/js/bootstrap-typeahead.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+    <!-- include scripts from latte --!>
+    {ifset customStyles}
+        {include customScripts}
+    {/ifset}
+	<!-- Menu Toggle Script -->
+        <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            menu("save");
+        });
+        </script>
+	{/block}
+</body>
+</html>

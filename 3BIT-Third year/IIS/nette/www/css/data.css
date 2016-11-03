@@ -1,0 +1,50 @@
+.red {
+    background: lightcoral !important;
+}
+
+.orange {
+    background: orange !important;
+}
+
+.green {
+    background: lightgreen !important;
+}
+
+
+
+.dateWarn {
+    background: red !important;
+}
+
+.dateDone {
+    background: green !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+.btn-fixed {
+    width: 120px !important;
+}
+
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
+
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
+
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
