@@ -1,0 +1,65 @@
+SLOVAK
+VYYYYHRA
+ZOBER SI KARTU!
+OTÁČAJ KAMEŇOM A VLOŽ / STLAČ POTVRĎ!
+POTVRD VLOZENIE / POUZI UNDO!
+CHOD S PANÁČIKOM A POTVRĎ !
+GRATULUJEM! NAŠIEL SI KARTU...
+NA ŤAHU JE HRÁČ:
+MENO:
+... NAŠIEL POKLADOV:
+UKONČIŤ ? SI SI ISTÝ?
+Najskôr je potrebné zobrať si kartu - na karte je poklad, ktorý hľadá.<br>Hráč hľadá svoju poklad na hracom poli.<br>Každé kolo môže hráč pootočiť voľným kameňom a následne ho vložiť<br>V tejto chvíli je možné voľbu vrátiť tlačidlom UNDO alebo potvrdiť.<br>Teraz môže hráč chodiť po cestičke klikaním o jedno políčko vedľa.<br>Následne hráč potvrdí svoje prechádzanie po poli -> na rade bude ďaľší hráč.<br>Jeden hráč môže zobrať viac pokladov.<br>Vyhráva hráč ktorý nazbiera ako prvý toľko pokladov ako počet pokladov v balíčku / počet hráčov.
+
+#BUTTONS,...
+NOVÁ HRA
+OTVORIŤ HRU
+ULOŽIŤ HRU
+OBNOVIŤ HRU
+POČET HRÁČOV
+SPAT !
+ĎALEJ !
+2 HRÁČI
+3 HRÁČI
+4 HRÁČI
+HRACIA PLOCHA
+SPAT !
+ĎALEJ !
+POKLADOV
+NASTAV MENO HRÁČA
+OK!
+SPAT !
+OBNOV VYBRATÚ HRU
+OTVÁRANIE NEÚSPEŠNÉ
+SPAT DO MENU !
+ŠTATISTIKA HRY
+VOĽNÝ KAMEŇ
+MOJA KARTA
+UNDO !
+POTVRĎ !
+MENU !
+NÁPOVEDA
+Ako hrať
+O hre
+Koniec
+Nastav jazyk
+O hre
+KONIEC !
+MENU !
+Vyber jazyk
+OK !
+HURA HRA KONČÍ
+Víťaz je
+HLAVNÉ MENU !
+Uloženie v poriadku!
+OK !
+Zvoľ meno uloženia
+OK !
+Ukladanie sa nepodarilo !
+SPAT !
+Takáto hra existuje! Prepísať?
+SPAT !
+PREPÍSAŤ !
+HRÁČ
+HRAJ !
+STLAČ HRAJ

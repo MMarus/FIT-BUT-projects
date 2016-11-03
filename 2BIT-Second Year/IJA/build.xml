@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="IJA_projekt" basedir="." default="main">
+    
+    <property name="src.dir"     value="src"/>
+    <property name="build.dir"   value="build"/>
+    <property name="doc.dir"   value="doc"/>
+    <property name="jar.dir"     value="dest-client"/>
+    <property name="main-class"  value="ija.Labyrinth"/>
+
+    <target name="clean">
+        <delete includeemptydirs="true">
+            <fileset dir="${build.dir}" includes="**/*"/>
+        </delete>
+        <delete includeemptydirs="true">
+            <fileset dir="${jar.dir}" includes="**/*"/>
+        </delete>
+                <delete includeemptydirs="true">
+            <fileset dir="${doc.dir}" includes="**/*"/>
+        </delete>
+        <delete includeemptydirs="true">
+            <fileset dir="lib" includes="resources/**" />
+        </delete>
+    </target>
+
+    
+
+
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        
+        <!-- Generate classes into ${src.dir} -->
+        <javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}"/>
+
+        <!-- Generate javadocs for current project into ${doc.dir} -->
+        <mkdir dir="${doc.dir}"/>
+        <javadoc sourcepath="${src.dir}" destdir="${doc.dir}"/>
+
+        <!-- download resources -->
+
+        <exec executable="/bin/bash">
+            <arg value="lib/get-libs.sh"/>
+        </exec>
+
+
+
+        <!-- Generate jar for current project into ${jar.dir}/ija2015-client.jar -->
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/ija2015-client.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+            <fileset dir="lib" includes="resources/**" />
+        </jar>
+    </target>
+
+
+    <target name="run">
+        <java jar="${jar.dir}/ija2015-client.jar" fork="true"/>
+    </target>
+
+    <target name="clean-build" depends="clean,compile"/>
+
+</project>

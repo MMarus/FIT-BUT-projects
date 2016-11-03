@@ -1,0 +1,88 @@
+Archive:  xhladi21.zip
+  inflating: dokumentace.pdf         
+  inflating: error.c                 
+  inflating: error.h                 
+  inflating: expr_inter.h            
+  inflating: exprs.c                 
+  inflating: exprs.h                 
+  inflating: ial.c                   
+  inflating: ial.h                   
+  inflating: instr.c                 
+  inflating: instr.h                 
+  inflating: interpret.c             
+  inflating: interpret.h             
+  inflating: i_string.c              
+  inflating: i_string.h              
+  inflating: main.c                  
+  inflating: main.h                  
+  inflating: Makefile                
+  inflating: parser.c                
+  inflating: parser.h                
+  inflating: rozdeleni.txt           
+  inflating: scanner.c               
+  inflating: scanner.h               
+  inflating: token.h                 
+  inflating: zasobnik.c              
+  inflating: zasobnik.h              
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o main.o main.c
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o scanner.o scanner.c
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o error.o error.c
+error.c: In function ‘err’:
+error.c:36:17: warning: unused variable ‘p_err’ [-Wunused-variable]
+     const char *p_err;
+                 ^
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o i_string.o i_string.c
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o exprs.o exprs.c
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o parser.o parser.c
+parser.c: In function ‘write_fun’:
+parser.c:86:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         add_instruction(I_WRITE, s, (void *) val_type, u);
+                                     ^
+parser.c: In function ‘function’:
+parser.c:221:41: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         add_instruction(I_PARAM_ADD, s, (void *) val_type, u);
+                                         ^
+parser.c: In function ‘assignment’:
+parser.c:298:9: warning: variable ‘left_type’ set but not used [-Wunused-but-set-variable]
+     int left_type;
+         ^
+parser.c: In function ‘init_pair’:
+parser.c:349:13: warning: unused variable ‘pair’ [-Wunused-variable]
+     pair_t *pair = malloc(sizeof(pair_t) * n);
+             ^
+parser.c:350:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+parser.c: In function ‘parse_function_forward’:
+parser.c:773:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o instr.o instr.c
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o zasobnik.o zasobnik.c
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o interpret.o interpret.c
+interpret.c: In function ‘interpret’:
+interpret.c:121:24: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+                 type = (int)instruction_list.active->inst.address2;
+                        ^
+interpret.c:134:24: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+                 type = (int)instruction_list.active->inst.address2;
+                        ^
+interpret.c:87:21: warning: variable ‘f_tmp’ set but not used [-Wunused-but-set-variable]
+     function_env_t *f_tmp, *f_t;
+                     ^
+interpret.c:86:31: warning: unused variable ‘end’ [-Wunused-variable]
+     char *tmp, *tmp1, *tmp2, *end;
+                               ^
+interpret.c:83:21: warning: unused variable ‘in’ [-Wunused-variable]
+     Symbol_t s, op, in, out;
+                     ^
+interpret.c:322:38: warning: ‘op2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+                     t->tdata.i = op1 + op2;
+                                      ^
+interpret.c:322:38: warning: ‘op1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc -I include -std=c99 -Wall -O2 -pedantic -g   -c -o ial.o ial.c
+ial.c: In function ‘init_symbol_t’:
+ial.c:328:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -I include -std=c99 -Wall -O2 -pedantic -g main.o scanner.o error.o i_string.o exprs.o parser.o instr.o zasobnik.o interpret.o ial.o -o compiler
