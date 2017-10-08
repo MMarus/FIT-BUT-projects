@@ -1,6 +1,20 @@
 # FIT-BUT-projects
-This repository contains some of the projects I have done during my studies of FIT BUT.
 
+## Projects during Bachelors study
+|  # | Subject | Title | Technology | Points |
+|:---:|:---:|:---:|:---:|:---:|
+| 1  | IZP | [Wordcounter](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/IZP/1.%20Wordcounter)  | C  |  5/5 |
+| 2  | IZP  | Iterative calculations  | C  | 10/10  |
+| 3  | IZP  | Pattern search  | C  | 7/10  |
+| 4  |   |   |   |   |
+| 5  |   |   |   |   |
+| 6  |   |   |   |   |
+| 7  |   |   |   |   |
+| 8  |   |   |   |   |
+| 9  |   |   |   |   |
+| 10 |   |   |   |   |
+
+This repository contains some of the projects I have done during my studies of FIT BUT.
 1. IZP - Introduction to Programming Systems
  1. Wordcounter (Počítání slov) 5/5
  2. Iterative calculations (Iterační výpočty) 10/10
