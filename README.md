@@ -5,17 +5,17 @@ Sorted from newest to oldest
 |  # | Subject | Title | Technology | Points |
 |:---:|:---:|:---:|:---:|:---:|
 | 1  | BIO | [Iris recognition](https://github.com/MMarus/BIO-Iris-Recognition)  |  C#, EmguCV | 16/18  |
-| 1  | PDB | [Land management](https://github.com/MMarus/PDB-Land-Management)  | Java SE, JavaFX  | 20/20  |
-| 1  | BIF | [Dynamic programming](https://github.com/MMarus/BIF)  | Python  |  13/14 |
-| 1  | BIN/EVO| [Cellular automata Art](https://github.com/MMarus/CellularAutomataArt)  | C++  | 25/25  |
-| 1  | PRL | [Enumeration sort](https://github.com/MMarus/FIT-BUT-projects/tree/master/1Mit/PRL/proj2)  | C++, OpenMPI  | 10/10  |
-| 1  | PRL | [Mesh multiplication](https://github.com/MMarus/PRL-proj3)  | C++, OpenMPI  |  6/10 |
-| 1  | ARC | [CPU heat simulation](https://github.com/MMarus/arc_proj01)  | C++, OpenMP  |  10/10 |
-| 1  | ARC | [CPU heat simulation](https://github.com/MMarus/ARC-proj2)  | C++, OpenMPI  | 20/20  |
-| 1  | KRY | [Secure tunnel](https://github.com/MMarus/KRY-projekt1)  | C++  |  7/7 |
-| 1  | KRY | [Security evaluator of HTTPS pages](https://github.com/MMarus/KRY-projekt2)  | C++  |  8/8 |
-| 1  | ZRE | [LPC decoder](https://github.com/MMarus/ZRE-LPC-decoder)  | Go  | 15/15  |
-| 1  | ZRE | [Recognition of words](https://github.com/MMarus/FIT-BUT-projects/tree/master/1Mit/ZRE/proj2)  | HTK  | 14/14  |
+| 2  | PDB | [Land management](https://github.com/MMarus/PDB-Land-Management)  | Java SE, JavaFX  | 20/20  |
+| 3  | BIF | [Dynamic programming](https://github.com/MMarus/BIF)  | Python  |  13/14 |
+| 4  | BIN/EVO| [Cellular automata Art](https://github.com/MMarus/CellularAutomataArt)  | C++  | 25/25  |
+| 5  | PRL | [Enumeration sort](https://github.com/MMarus/FIT-BUT-projects/tree/master/1Mit/PRL/proj2)  | C++, OpenMPI  | 10/10  |
+| 6  | PRL | [Mesh multiplication](https://github.com/MMarus/PRL-proj3)  | C++, OpenMPI  |  6/10 |
+| 7  | ARC | [CPU heat simulation](https://github.com/MMarus/arc_proj01)  | C++, OpenMP  |  10/10 |
+| 8  | ARC | [CPU heat simulation](https://github.com/MMarus/ARC-proj2)  | C++, OpenMPI  | 20/20  |
+| 9  | KRY | [Secure tunnel](https://github.com/MMarus/KRY-projekt1)  | C++  |  7/7 |
+| 10  | KRY | [Security evaluator of HTTPS pages](https://github.com/MMarus/KRY-projekt2)  | C++  |  8/8 |
+| 11  | ZRE | [LPC decoder](https://github.com/MMarus/ZRE-LPC-decoder)  | Go  | 15/15  |
+| 12  | ZRE | [Recognition of words](https://github.com/MMarus/FIT-BUT-projects/tree/master/1Mit/ZRE/proj2)  | HTK  | 14/14  |
 
 ## My Bachelor thesis
 |  # | Subject | Title | Technology | Grade |
