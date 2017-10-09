@@ -17,7 +17,7 @@ Sorted from newest to oldest
 | 1  | ZRE | [LPC decoder](https://github.com/MMarus/ZRE-LPC-decoder)  | Go  | 15/15  |
 | 1  | ZRE | [Recognition of words](https://github.com/MMarus/FIT-BUT-projects/tree/master/1Mit/ZRE/proj2)  | HTK  | 14/14  |
 
-##My Bachelor thesis
+## My Bachelor thesis
 |  # | Subject | Title | Technology | Grade |
 |:---:|:---:|:---:|:---:|:---:|
 | 1  | Bachelor Thesis | [Automatization of MitM Attack for SSL/TLS Decryption](https://github.com/MMarus/AutoMITM)  | Python, C  |  B |
