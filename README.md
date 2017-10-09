@@ -35,7 +35,7 @@
 | 10  |  IPP |  [XML to DDL script](https://github.com/MMarus/FIT-BUT-projects/tree/master/2BIT-Second%20year/IPP/XTD) | Python  | 10/10  |
 | 11  |  IZG |  [Rabbit rendering](https://github.com/MMarus/FIT-BUT-projects/tree/master/2BIT-Second%20year/IZG/Proj1) | C (SDL)  | 14/18  |
 | 12  |  IJA |  [Labyrinth Game](https://github.com/MMarus/FIT-BUT-projects/tree/master/2BIT-Second%20year/IJA) | Java SE, Swing  | 100/100  |
-| 13  |  ISJ |  [Twitter and phorum crawler](https://github.com/MMarus/FIT-BUT-projects/tree/master/2BIT-Second%20year/ISJ) | Python  | 36/40  |
+| 13  |  ISJ |  [Twitter and phorum scraper](https://github.com/MMarus/FIT-BUT-projects/tree/master/2BIT-Second%20year/ISJ) | Python  | 36/40  |
 
 ## Bachelors study 3rd year
 |  # | Subject | Title | Technology | Points |
