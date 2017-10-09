@@ -1,0 +1,256 @@
+#!MLF!#
+"data/train/yes-raw/10.lab"
+0	7402500	YES
+.
+"data/train/yes-raw/11.lab"
+0	3941250	YES
+.
+"data/train/yes-raw/12.lab"
+0	7135000	YES
+.
+"data/train/yes-raw/13.lab"
+0	6507500	YES
+.
+"data/train/yes-raw/14.lab"
+0	6008750	YES
+.
+"data/train/yes-raw/15.lab"
+0	7336250	YES
+.
+"data/train/yes-raw/16.lab"
+0	9070000	YES
+.
+"data/train/yes-raw/17.lab"
+0	6966250	YES
+.
+"data/train/yes-raw/18.lab"
+0	6980000	YES
+.
+"data/train/yes-raw/19.lab"
+0	4605000	YES
+.
+"data/train/yes-raw/1.lab"
+0	4980000	YES
+.
+"data/train/yes-raw/20.lab"
+0	7236250	YES
+.
+"data/train/yes-raw/2.lab"
+0	11006250	YES
+.
+"data/train/yes-raw/3.lab"
+0	5950000	YES
+.
+"data/train/yes-raw/4.lab"
+0	9952500	YES
+.
+"data/train/yes-raw/5.lab"
+0	9236250	YES
+.
+"data/train/yes-raw/6.lab"
+0	7570000	YES
+.
+"data/train/yes-raw/7.lab"
+0	5642500	YES
+.
+"data/train/yes-raw/8.lab"
+0	6237500	YES
+.
+"data/train/yes-raw/9.lab"
+0	4497500	YES
+.
+"data/train/no-raw/10.lab"
+0	7893750	NO
+.
+"data/train/no-raw/11.lab"
+0	7042500	NO
+.
+"data/train/no-raw/12.lab"
+0	8048750	NO
+.
+"data/train/no-raw/13.lab"
+0	7507500	NO
+.
+"data/train/no-raw/14.lab"
+0	8126250	NO
+.
+"data/train/no-raw/15.lab"
+0	7507500	NO
+.
+"data/train/no-raw/16.lab"
+0	7275000	NO
+.
+"data/train/no-raw/17.lab"
+0	7997500	NO
+.
+"data/train/no-raw/18.lab"
+0	7172500	NO
+.
+"data/train/no-raw/19.lab"
+0	14656250	NO
+.
+"data/train/no-raw/1.lab"
+0	3265000	NO
+.
+"data/train/no-raw/20.lab"
+0	4040000	NO
+.
+"data/train/no-raw/21.lab"
+0	5411250	NO
+.
+"data/train/no-raw/22.lab"
+0	4223750	NO
+.
+"data/train/no-raw/23.lab"
+0	4322500	NO
+.
+"data/train/no-raw/24.lab"
+0	6880000	NO
+.
+"data/train/no-raw/25.lab"
+0	8711250	NO
+.
+"data/train/no-raw/26.lab"
+0	5015000	NO
+.
+"data/train/no-raw/27.lab"
+0	8178750	NO
+.
+"data/train/no-raw/28.lab"
+0	7403750	NO
+.
+"data/train/no-raw/2.lab"
+0	5093750	NO
+.
+"data/train/no-raw/30.lab"
+0	4236250	NO
+.
+"data/train/no-raw/31.lab"
+0	5340000	NO
+.
+"data/train/no-raw/32.lab"
+0	5225000	NO
+.
+"data/train/no-raw/33.lab"
+0	11542500	NO
+.
+"data/train/no-raw/34.lab"
+0	6008750	NO
+.
+"data/train/no-raw/35.lab"
+0	11232500	NO
+.
+"data/train/no-raw/36.lab"
+0	6008750	NO
+.
+"data/train/no-raw/3.lab"
+0	3500000	NO
+.
+"data/train/no-raw/4.lab"
+0	3762500	NO
+.
+"data/train/no-raw/5.lab"
+0	7145000	NO
+.
+"data/train/no-raw/6.lab"
+0	12278750	NO
+.
+"data/train/no-raw/7.lab"
+0	5938750	NO
+.
+"data/train/no-raw/8.lab"
+0	8051250	NO
+.
+"data/train/no-raw/9.lab"
+0	9106250	NO
+.
+"data/train/hello-raw/10.lab"
+0	6550000	HELLO
+.
+"data/train/hello-raw/11.lab"
+0	10415000	HELLO
+.
+"data/train/hello-raw/12.lab"
+0	4035000	HELLO
+.
+"data/train/hello-raw/13.lab"
+0	8351250	HELLO
+.
+"data/train/hello-raw/14.lab"
+0	11570000	HELLO
+.
+"data/train/hello-raw/15.lab"
+0	5322500	HELLO
+.
+"data/train/hello-raw/16.lab"
+0	9955000	HELLO
+.
+"data/train/hello-raw/17.lab"
+0	9462500	HELLO
+.
+"data/train/hello-raw/18.lab"
+0	5486250	HELLO
+.
+"data/train/hello-raw/19.lab"
+0	7307500	HELLO
+.
+"data/train/hello-raw/1.lab"
+0	5477500	HELLO
+.
+"data/train/hello-raw/20.lab"
+0	3943750	HELLO
+.
+"data/train/hello-raw/21.lab"
+0	5076250	HELLO
+.
+"data/train/hello-raw/22.lab"
+0	4402500	HELLO
+.
+"data/train/hello-raw/23.lab"
+0	9917500	HELLO
+.
+"data/train/hello-raw/24.lab"
+0	9068750	HELLO
+.
+"data/train/hello-raw/25.lab"
+0	6555000	HELLO
+.
+"data/train/hello-raw/26.lab"
+0	7385000	HELLO
+.
+"data/train/hello-raw/27.lab"
+0	5517500	HELLO
+.
+"data/train/hello-raw/28.lab"
+0	7552500	HELLO
+.
+"data/train/hello-raw/29.lab"
+0	4881250	HELLO
+.
+"data/train/hello-raw/2.lab"
+0	4016250	HELLO
+.
+"data/train/hello-raw/30.lab"
+0	5216250	HELLO
+.
+"data/train/hello-raw/3.lab"
+0	3128750	HELLO
+.
+"data/train/hello-raw/4.lab"
+0	4803750	HELLO
+.
+"data/train/hello-raw/5.lab"
+0	4751250	HELLO
+.
+"data/train/hello-raw/6.lab"
+0	3756250	HELLO
+.
+"data/train/hello-raw/7.lab"
+0	2917500	HELLO
+.
+"data/train/hello-raw/8.lab"
+0	4830000	HELLO
+.
+"data/train/hello-raw/9.lab"
+0	3745000	HELLO
+.

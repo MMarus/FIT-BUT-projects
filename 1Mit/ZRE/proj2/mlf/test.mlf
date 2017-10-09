@@ -1,0 +1,91 @@
+#!MLF!#
+"data/test/yes-raw/21.lab"
+0	3281250	YES
+.
+"data/test/yes-raw/22.lab"
+0	6488750	YES
+.
+"data/test/yes-raw/23.lab"
+0	7606250	YES
+.
+"data/test/yes-raw/24.lab"
+0	6798750	YES
+.
+"data/test/yes-raw/25.lab"
+0	8742500	YES
+.
+"data/test/yes-raw/26.lab"
+0	7952500	YES
+.
+"data/test/yes-raw/27.lab"
+0	6647500	YES
+.
+"data/test/yes-raw/28.lab"
+0	14387500	YES
+.
+"data/test/yes-raw/29.lab"
+0	8832500	YES
+.
+"data/test/yes-raw/30.lab"
+0	9578750	YES
+.
+"data/test/no-raw/37.lab"
+0	4918750	NO
+.
+"data/test/no-raw/38.lab"
+0	12596250	NO
+.
+"data/test/no-raw/39.lab"
+0	10913750	NO
+.
+"data/test/no-raw/40.lab"
+0	5935000	NO
+.
+"data/test/no-raw/41.lab"
+0	7513750	NO
+.
+"data/test/no-raw/42.lab"
+0	5388750	NO
+.
+"data/test/no-raw/43.lab"
+0	4047500	NO
+.
+"data/test/no-raw/44.lab"
+0	4942500	NO
+.
+"data/test/no-raw/45.lab"
+0	4241250	NO
+.
+"data/test/no-raw/46.lab"
+0	3307500	NO
+.
+"data/test/hello-raw/31.lab"
+0	3780000	HELLO
+.
+"data/test/hello-raw/32.lab"
+0	4418750	HELLO
+.
+"data/test/hello-raw/33.lab"
+0	6733750	HELLO
+.
+"data/test/hello-raw/34.lab"
+0	3823750	HELLO
+.
+"data/test/hello-raw/35.lab"
+0	7496250	HELLO
+.
+"data/test/hello-raw/36.lab"
+0	5040000	HELLO
+.
+"data/test/hello-raw/37.lab"
+0	4400000	HELLO
+.
+"data/test/hello-raw/38.lab"
+0	10102500	HELLO
+.
+"data/test/hello-raw/39.lab"
+0	9183750	HELLO
+.
+"data/test/hello-raw/40.lab"
+0	10273750	HELLO
+.

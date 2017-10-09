@@ -17,7 +17,7 @@ Sorted from newest to oldest
 | 1  | ZRE | [LPC decoder](https://github.com/MMarus/ZRE-LPC-decoder)  | Go  | 15/15  |
 | 1  | ZRE | [Recognition of words](https://github.com/MMarus/FIT-BUT-projects/tree/master/1Mit/ZRE/proj2)  | HTK  | 14/14  |
 
-##My Bachelor thesis
+## My Bachelor thesis
 |  # | Subject | Title | Technology | Grade |
 |:---:|:---:|:---:|:---:|:---:|
 | 1  | Bachelor Thesis | [Automatization of MitM Attack for SSL/TLS Decryption](https://github.com/MMarus/AutoMITM)  | Python, C  |  B |
@@ -64,9 +64,9 @@ Sorted from newest to oldest
 | 8  |  IOS |  [Bash scripts](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/IOS/Project1) | bash  | 15/15  |
 | 9  |  IOS | [Semaphores](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/IOS/Project2)  | C  | 14/15  |
 | 10 | IJC  |  [Primes by Erathostenes](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/IJC/Project1) | C  |  12/15 |
-| 10 | IJC  |  [Word count and Hash tables](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/IJC/Project1) | C  |  10/15 |
-| 11 | ITY  | [Typography and Publishing 1](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/ITY/Project1)  | LaTex  |  10/10 |
-| 12 | ITY  | [Typography and Publishing 2](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/ITY/Proj2)  | LaTex  |  3/15 |
-| 13 | ITY  | [Typography and Publishing 3](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/ITY/Proj3)  |  LaTex |  14/15 |
-| 14 | ITY  | [Typography and Publishing 4](https://github.com/MMarus/FIT-BUT-projects/blob/master/1BIT-First%20year/ITY/Proj4)  | LaTex  |  15/15 |
-| 15 | ITY  | [Typography and Publishing 5](https://github.com/MMarus/FIT-BUT-projects/blob/master/1BIT-First%20year/ITY/Proj5)  | LaTex  |  15/15 |
+| 11 | IJC  |  [Word count and Hash tables](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/IJC/Project1) | C  |  10/15 |
+| 12 | ITY  | [Typography and Publishing 1](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/ITY/Project1)  | LaTex  |  10/10 |
+| 13 | ITY  | [Typography and Publishing 2](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/ITY/Proj2)  | LaTex  |  3/15 |
+| 14 | ITY  | [Typography and Publishing 3](https://github.com/MMarus/FIT-BUT-projects/tree/master/1BIT-First%20year/ITY/Proj3)  |  LaTex |  14/15 |
+| 15 | ITY  | [Typography and Publishing 4](https://github.com/MMarus/FIT-BUT-projects/blob/master/1BIT-First%20year/ITY/Proj4)  | LaTex  |  15/15 |
+| 16 | ITY  | [Typography and Publishing 5](https://github.com/MMarus/FIT-BUT-projects/blob/master/1BIT-First%20year/ITY/Proj5)  | LaTex  |  15/15 |

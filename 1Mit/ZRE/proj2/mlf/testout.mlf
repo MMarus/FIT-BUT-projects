@@ -1,0 +1,91 @@
+#!MLF!#
+"data/test/hello-raw/31.rec"
+0 3600000 HELLO -2509.398682
+.
+"data/test/hello-raw/32.rec"
+0 4200000 HELLO -2751.128906
+.
+"data/test/hello-raw/33.rec"
+0 6500000 NO -5103.342773
+.
+"data/test/hello-raw/34.rec"
+0 3600000 HELLO -2596.224609
+.
+"data/test/hello-raw/35.rec"
+0 7300000 NO -4914.590820
+.
+"data/test/hello-raw/36.rec"
+0 4800000 HELLO -3068.740967
+.
+"data/test/hello-raw/37.rec"
+0 4200000 NO -3358.355713
+.
+"data/test/hello-raw/38.rec"
+0 9900000 HELLO -6449.202148
+.
+"data/test/hello-raw/39.rec"
+0 9000000 HELLO -5801.396973
+.
+"data/test/hello-raw/40.rec"
+0 10100000 HELLO -6379.618164
+.
+"data/test/no-raw/37.rec"
+0 4700000 HELLO -3210.570557
+.
+"data/test/no-raw/38.rec"
+0 12400000 NO -9765.918945
+.
+"data/test/no-raw/39.rec"
+0 10700000 NO -7405.373047
+.
+"data/test/no-raw/40.rec"
+0 5700000 NO -4245.680176
+.
+"data/test/no-raw/41.rec"
+0 7300000 HELLO -4991.100586
+.
+"data/test/no-raw/42.rec"
+0 5200000 HELLO -3866.662354
+.
+"data/test/no-raw/43.rec"
+0 3800000 NO -2902.168945
+.
+"data/test/no-raw/44.rec"
+0 4700000 NO -3592.233887
+.
+"data/test/no-raw/45.rec"
+0 4000000 NO -2949.575195
+.
+"data/test/no-raw/46.rec"
+0 3100000 YES -2479.153809
+.
+"data/test/yes-raw/21.rec"
+0 3100000 YES -2472.885010
+.
+"data/test/yes-raw/22.rec"
+0 6300000 YES -4084.107910
+.
+"data/test/yes-raw/23.rec"
+0 7400000 YES -4304.908203
+.
+"data/test/yes-raw/24.rec"
+0 6600000 YES -4944.284668
+.
+"data/test/yes-raw/25.rec"
+0 8500000 YES -5969.995605
+.
+"data/test/yes-raw/26.rec"
+0 7800000 YES -5637.266113
+.
+"data/test/yes-raw/27.rec"
+0 6400000 YES -4632.279297
+.
+"data/test/yes-raw/28.rec"
+0 14200000 YES -9650.381836
+.
+"data/test/yes-raw/29.rec"
+0 8600000 YES -6074.454590
+.
+"data/test/yes-raw/30.rec"
+0 9400000 YES -6167.397461
+.
