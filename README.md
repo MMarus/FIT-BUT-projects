@@ -27,7 +27,7 @@ Sorted from newest to oldest
 |:---:|:---:|:---:|:---:|:---:|
 | 1  | IIS | [Information system for doctors](https://github.com/MMarus/doctors-IS)  | PHP(nette)  |  29/30 |
 | 2  | IMP | [Configurable counter](https://github.com/MMarus/FIT-BUT-projects/tree/master/3BIT-Third%20year/IMP)  | asembler HCS08  |  12/14 |
-| 3  | IMS | [Plant growth simulation in Cellular Automata](TODO)  | C  |  20/20 |
+| 3  | IMS | [Plant growth simulation in Cellular Automata](https://github.com/Raiper34/IMS-Simulation)  | C  |  20/20 |
 | 4  | ISA | [SIP client](https://github.com/MMarus/FIT-BUT-projects/tree/master/3BIT-Third%20year/ISA/)  | C/C++  |  14/15 |
 | 5  | ITU | [Real time collaborative environment](https://github.com/MMarus/share.it)  | Node.js (socket.io, express.js)  |  47/55 |
 | 6  | ITW | [Recreate a web page](https://github.com/MMarus/FIT-BUT-projects/tree/master/3BIT-Third%20year/ITW)  | HTML,CSS  |  20/20 |
